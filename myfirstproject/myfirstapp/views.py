@@ -8,5 +8,8 @@ def formulaire(request):
     return render(request, "myfirstapp/formulaire.html")
 
 def bonjour(request):
-    nom = request.GET("nom")
-    return render(request, "myfirstapp/bonjour.html", {"nom": nom})
+    nom = request.GET["nom"]
+    return render(request, 'myfirstapp/bonjour.html', {"nom": nom})
+
+def heritant(request):
+    return render(request, "myfirstapp/heritant.html")

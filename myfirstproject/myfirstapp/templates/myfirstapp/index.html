@@ -1,10 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
+    {% load static %}
     <meta charset="UTF-8">
-    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="{%static 'myfirstapp/index.css' %}">
+    <title>index</title>
 </head>
 <body>
-<h1> ma première page "dynamique"    </h1>
+ {% if nom is not None %}
+ <h1> Hello {{nom}} </h1>
+ {% else %}
+ <h1> Hello world </h1>
+ {% endif %}
 </body>
 </html>
